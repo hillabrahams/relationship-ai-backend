@@ -1,5 +1,9 @@
 version: "3.8"
 
+ permissions:
+      contents: read
+      packages: write
+
 services:
   backend:
     build: .
