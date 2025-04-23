@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  backend:
+    build: .
+    container_name: relationship_ai_backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - OPENAI_API_KEY=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
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
